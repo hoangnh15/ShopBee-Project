@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopBee</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="assets/vendors/jquery.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.js"></script>
+    <style>
+        #danhmucsanpham .dropdown-toggle::after {
+            display: none;
+            /* Ẩn dấu mũi tên xổ xuống */
+
+        }
+        #danhmucsanpham .dropdown-menu {
+        width: 350px; /* Chỉnh lại kích thước menu xổ xuống */
+    }
+       /* Tạo submenu cho các mục */
+       .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: 0;
+            display: none;
+            position: absolute;
+        }
+
+        .dropdown-submenu:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="myheader">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 py-3">
+                    <img src="images/logo.png" class="img-fluid" alt="Logo" height="50px" width="150px">
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group mb-3 py-3 ">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
+                            aria-label="Tìm kiếm sản phẩm" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2"><i
+                                class="fa-solid fa-magnifying-glass"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="fs-3 text-danger">
+                                        <i class="fa-sharp-duotone fa-solid fa-phone"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-9">
+                                    Tư vấn hỗ trợ<br>
+                                    <strong class="text-danger">0123456789</strong>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="fs-3 text-danger">
+                                        <i class="fa-solid fa-circle-user"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-9">
+                                    Xin chào!<br>
+                                    <strong class="text-danger">Đăng nhập</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 py-3">
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="position-relative">
+                                <span class="fs-2"><i class="fa-regular fa-heart"></i></span>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="position-relative">
+                                <span class="fs-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="position-relative">
+                                <span class="fs-2"><i class="fa-solid fa-code-compare"></i></span>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---Main menu-->
+    <section class="mymainmenu bg-warning">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-dark py-3" id="danhmucsanpham">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <div class="row">
+                            <div class="col-md-1"><i class="fa-solid fa-bars"></i></div>
+                            <div class="col-md-11">Danh mục sản phẩm</div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu"><a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa-solid fa-mobile"></i></div>
+                                <div class="col-md-10">Điện thoại</div>
+                            </div>
+                        </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">iPhone</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu"><a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa-solid fa-laptop"></i></div>
+                                <div class="col-md-10">Laptop</div>
+                            </div>
+                        </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">MacBook</a></li>
+                                <li><a class="dropdown-item" href="#">Dell</a></li>
+                                <li><a class="dropdown-item" href="#">Asus</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu"><a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa-solid fa-headphones"></i></div>
+                                <div class="col-md-10">Phụ kiện</div>
+                            </div>
+                        </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Tai nghe</a></li>
+                                <li><a class="dropdown-item" href="#">Bàn phím</a></li>
+                                <li><a class="dropdown-item" href="#">Chuột</a></li>
+                            </ul>
+                        </li>
+                        <hr>
+                        <li><a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa-solid fa-tv"></i></div>
+                                <div class="col-md-10">Tivi, Tủ lạnh, Điều hòa</div>
+                            </div>
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa-solid fa-shower"></i></div>
+                                <div class="col-md-10">Máy giặt máy sấy,...</div>
+                            </div>
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa-solid fa-microchip"></i></div>
+                                <div class="col-md-10">PC, linh kiện PC</div>
+                            </div>
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa-solid fa-fan"></i></div>
+                                <div class="col-md-10">Quạt, quạt điều hòa, máy nước nóng</div>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+                <!---Menu-->
+                <div class="col-md-9">
+                    <nav class="navbar navbar-expand-lg bg-warning">
+                        <div class="container-fluid">
+                            <a class="navbar-brand d-none" href="#">Navbar</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link text-dark active" aria-current="page" href="#">Trang chủ</a>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link text-dark " href="#">Giới thiệu</a>
+                                    </li>
+                                    <li class="nav-item dropdown px-2">
+                                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Sản phẩm
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link disabled text-dark" aria-disabled="true">Tin tức</a>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link disabled text-dark" aria-disabled="true">Tuyển dụng</a>
+                                    </li>
+                                    <li class="nav-item px-2">
+                                        <a class="nav-link disabled text-dark" aria-disabled="true">Liên hệ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    
+    <!--Footer-->
+    <section class="myfooter bg-body-secondary text-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4> Chăm sóc khách hàng</h4>
+                    <ul>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">ShopBee Blog</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Hướng dẫn Mua hàng</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Hướng dẫn Thanh toán</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Vận chuyển</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Trả hàng & hoàn tiền</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">CSKH</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Chính sách bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Về ShopBee</h4>
+                    <ul>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Giới thiệu</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Tuyển dụng</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Điều khoản</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Chính sách bảo mật</a>
+                        </li>
+                        <li class="li_menu">
+                            <a href="/" style="color: inherit; text-decoration: none;">Liên hệ truyền thông</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <h4>Thanh toán</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8"
+                                    alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16"
+                                    alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row py-3">
+                                <div class="col-md-4">
+                                    <img src="./images/momo_icon_square_pinkbg_RGB.png " class="img-fluid" alt=""
+                                        height="50px" width="50px">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="https://th.bing.com/th?id=OIP.SRSzWrk4GjtaHn6ZjulVDAHaIE&w=474&h=516&c=7&qlt=80&bgcl=fffffe&r=0&o=6&pid=MultiSMRSV2Source"
+                                        alt="" class="img-fluid " alt="" height="50px" width="50px">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="./images/zalopay-logo_brandlogos.net_fjcup.png" alt=""
+                                        class="img-fluid bg-white" alt="" height="50px" width="50px">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h4>Đơn vị vận chuyển</h4>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="https://down-vn.img.susercontent.com/file/59270fb2f3fbb7cbc92fca3877edde3f"
+                                            alt="">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="https://down-vn.img.susercontent.com/file/d10b0ec09f0322f9201a4f3daf378ed2"
+                                            alt="">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="https://down-vn.img.susercontent.com/file/0d349e22ca8d4337d11c9b134cf9fe63"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-md-3">
+                    <h4>Theo dõi chúng tôi trên</h4>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                        <div class="col-md-11">
+                            <a href="https://facebook.com" style="color: inherit; text-decoration: none;">facebook</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="col-md-11">
+                            <a href="https://instagram.com" style="color: inherit; text-decoration: none;">instagram</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <div class="col-md-11">
+                            <a href="https://linkedin.com" style="color: inherit; text-decoration: none;">linkedin</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>SHOPBEE - BUY EVERYTHING YOU CAN</h4>
+                        <p>Copyright@ 2024 Công ty cổ phần thương mại ShopBee <br>Chứng nhận ĐKKD số: 12345 do sở KH &
+                            ĐT TP.UIT cấp <br>Địa chỉ: Khu phố 6, Phường Linh Trung, TP. Thủ Đức - HCM
+                            <br>Điện thoại: 0123456789 - Email: support@shopbee.vn
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Chi nhánh Store</h4>
+                        <ul>
+                            <li class="li_menu">Tòa nhà E UIT, khu phố 6, Phường Linh Trung, TP. Thủ Đức,TP.HCM</li>
+                            <li class="li_menu">Phường 3, TP. Tây Ninh, Tỉnh Tây Ninh</li>
+                            <li class="li_menu">TP. Bến Tre, tỉnh Bến Tre</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        Bản quyền thuộc về <a href="/" style="color: inherit; text-decoration: none;">The 1709
+                            Company</a> Cung cấp bởi LoserUIT
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-2"><a href="/" style="color: inherit; text-decoration: none;"> Trang
+                                    chủ</a></div>
+                            <div class="col-md-2"><a href="/" style="color: inherit; text-decoration: none;"> Giới
+                                    thiệu</a></div>
+                            <div class="col-md-2"><a href="/" style="color: inherit; text-decoration: none;"> Sản
+                                    phẩm</a></div>
+                            <div class="col-md-3"><a href="/" style="color: inherit; text-decoration: none;"> Tin mới
+                                    nhất</a></div>
+                            <div class="col-md-3"><a href="/" style="color: inherit; text-decoration: none;"> Câu hỏi
+                                    thường gặp</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Khởi tạo carousel trước
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10, // Thêm khoảng cách giữa các item
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    540: {
+                        items: 2,
+                        nav: false
+                    },
+                    600: {
+                        items: 3,
+                        nav: false
+                    },
+                    1000: {
+                        items: 6,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            });
+
+            // Đảm bảo các card có chiều cao bằng nhau
+            var maxHeight = 0;
+            $('.owl-carousel .card').each(function () {
+                var thisHeight = $(this).outerHeight();
+                if (thisHeight > maxHeight) {
+                    maxHeight = thisHeight;
+                }
+            });
+            $('.owl-carousel .card').height(maxHeight);
+
+            // Đảm bảo kích thước card là 150px x 150px
+            $('.owl-carousel .card').css({
+                'width': '150px',
+                'height': '150px'
+            });
+        });
+
+
+    </script>
+    <script>
+        //mouse hover
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdown = document.getElementById('danhmucsanpham');
+
+            dropdown.addEventListener('mouseover', function () {
+                var dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                if (dropdownMenu) {
+                    var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
+                    bootstrapDropdown.show();
+                }
+            });
+
+            dropdown.addEventListener('mouseout', function () {
+                var dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                if (dropdownMenu) {
+                    var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
+                    bootstrapDropdown.hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
