@@ -16,6 +16,7 @@
     <script src="assets/vendors/jquery.min.js"></script>
     <script src="assets/owlcarousel/owl.carousel.js"></script>
     <script src="custom/scripts.js"></script>
+    <link rel="stylesheet" href="/custom/styles.css">
     <style>
         #danhmucsanpham .dropdown-toggle::after {
             display: none;
@@ -54,7 +55,7 @@
                 <div class="col-md-2 col-sm-3 py-3">
                     <img src="images/logo.png" class="img-fluid" alt="Logo" height="50px" width="150px">
                 </div>
-                <div class="col-md-2 col-sm-3 ">
+                <div class="col-md-3 col-sm-3 ">
                     <div class="input-group mb-3 py-3 ">
                         <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
                             aria-label="Tìm kiếm sản phẩm" aria-describedby="basic-addon2">
@@ -62,7 +63,7 @@
                                 class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 py-3">
+                <div class="col-md-3 col-sm-6 py-3">
                     <div class="row">
                         <div class="col">
                             <div class="row">
@@ -501,30 +502,31 @@
                             <img id="product_banner_left" src="images/banner/banner_dt.png" alt="" class="img-fluid w-100 h-100" style="object-fit: cover;">
                         </div>
                         
-                       <div id="tab_product_content_right" class="col-md-9 " style="border-bottom-right-radius: 2%; background-color:#ed4e2e ;">
+                       <div id="tab_product_content_right" class="col-md-9 " style="height: 306px; border-bottom-right-radius: 2%; background-color:#ed4e2e ;">
                             <div class="row">
-                                <div class="owl-carousel owl-theme">
+                                <div id= "tab_product carousel" class="owl-carousel owl-theme">
                                     <div class="item">
-                                        <div id="card_banner" class="card my-0" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
+                                        <div id="card_banner" class="card my-3 mx-3" style="width: 18rem;">
+                                            <img src="/images/banner/iphone_15_pro_max_f589ed5358.png" class="card-img-top " alt="..." width="130px" height="160px">
                                             <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                                              <h5 class="card-title " style="font-size: small;"><a href="#">Iphone 15 Promax 256GB VN/A</a></h5>
+                                              <div class="row">
+                                                <div class="col-md-6 text-decoration-line-through">
+                                                    <p style="font-size: x-small; ">34.990.000 đ</p> 
+                                                </div>
+                                                <div class="col text-danger "><p style="font-size: x-small;">-16% </p> </div>
+                                              </div>
+                                              <div class="row card-text" style="margin-top: -6%;">
+                                                    29.390.000 đ
+                                              </div>
+                                              
                                             </div>
                                           </div>
+                                        
                                     </div>
-                                    <div class="item"><h4>2</h4></div>
+                                    
                                     <div class="item"><h4>3</h4></div>
-                                    <div class="item"><h4>4</h4></div>
-                                    <div class="item"><h4>5</h4></div>
-                                    <div class="item"><h4>6</h4></div>
-                                    <div class="item"><h4>7</h4></div>
-                                    <div class="item"><h4>8</h4></div>
-                                    <div class="item"><h4>9</h4></div>
-                                    <div class="item"><h4>10</h4></div>
-                                    <div class="item"><h4>11</h4></div>
-                                    <div class="item"><h4>12</h4></div>
+                                    
                                 </div>
                             </div>
                        </div>
@@ -715,6 +717,7 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    
     <script>
         $(document).ready(function () {
             // Khởi tạo carousel trước
@@ -757,6 +760,14 @@
             $('.owl-carousel .card').css({
                 'width': '150px',
                 'height': '150px'
+            });
+
+            $('.owl-carousel #card_banner').height(maxHeight);
+
+            // Đảm bảo kích thước card là 150px x 150px
+            $('.owl-carousel #card_banner').css({
+                'width': '200px',
+                'height': '280px'
             });
 
             

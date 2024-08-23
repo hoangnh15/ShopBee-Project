@@ -1,4 +1,10 @@
 
+$(document).ready(function() {
+    // Gọi hàm khi cần
+    addItemToCarousel();
+
+    
+});
 document.addEventListener('DOMContentLoaded', function() {
     var button1 = document.getElementById('cus_tab_btn1');
     var button2 = document.getElementById('cus_tab_btn2');
@@ -28,8 +34,17 @@ document.addEventListener('DOMContentLoaded', function() {
         button1.style.backgroundColor = '#eaedf1';
         tab_content_left.style.backgroundColor = tab_content_right.style.backgroundColor = '#b3e3f0';
         product_banner_left.src = 'images/banner/banner_3_tab.webp';
+      
     });
 
 });
+
+
+
+
+
+
+
+
 
 
