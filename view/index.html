@@ -15,37 +15,10 @@
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
     <script src="assets/vendors/jquery.min.js"></script>
     <script src="assets/owlcarousel/owl.carousel.js"></script>
+    
     <script src="custom/scripts.js"></script>
-    <link rel="stylesheet" href="/custom/styles.css">
-    <style>
-        #danhmucsanpham .dropdown-toggle::after {
-            display: none;
-            /* Ẩn dấu mũi tên xổ xuống */
-
-        }
-
-        #danhmucsanpham .dropdown-menu {
-            width: 350px;
-            /* Chỉnh lại kích thước menu xổ xuống */
-        }
-
-        /* Tạo submenu cho các mục */
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: 0;
-            display: none;
-            position: absolute;
-        }
-
-        .dropdown-submenu:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="custom/styles.css">
+    
 </head>
 
 <body>
@@ -780,28 +753,7 @@
         
 
     </script>
-    <script>
-        //mouse hover
-        document.addEventListener('DOMContentLoaded', function () {
-            var dropdown = document.getElementById('danhmucsanpham');
-
-            dropdown.addEventListener('mouseover', function () {
-                var dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                if (dropdownMenu) {
-                    var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
-                    bootstrapDropdown.show();
-                }
-            });
-
-            dropdown.addEventListener('mouseout', function () {
-                var dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                if (dropdownMenu) {
-                    var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
-                    bootstrapDropdown.hide();
-                }
-            });
-        });
-    </script>
+    
 </body>
 
 </html>
