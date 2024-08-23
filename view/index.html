@@ -15,17 +15,21 @@
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
     <script src="assets/vendors/jquery.min.js"></script>
     <script src="assets/owlcarousel/owl.carousel.js"></script>
+    <script src="custom/scripts.js"></script>
     <style>
         #danhmucsanpham .dropdown-toggle::after {
             display: none;
             /* Ẩn dấu mũi tên xổ xuống */
 
         }
+
         #danhmucsanpham .dropdown-menu {
-        width: 350px; /* Chỉnh lại kích thước menu xổ xuống */
-    }
-       /* Tạo submenu cho các mục */
-       .dropdown-submenu {
+            width: 350px;
+            /* Chỉnh lại kích thước menu xổ xuống */
+        }
+
+        /* Tạo submenu cho các mục */
+        .dropdown-submenu {
             position: relative;
         }
 
@@ -47,10 +51,10 @@
     <section class="myheader">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 py-3">
+                <div class="col-md-2 col-sm-3 py-3">
                     <img src="images/logo.png" class="img-fluid" alt="Logo" height="50px" width="150px">
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2 col-sm-3 ">
                     <div class="input-group mb-3 py-3 ">
                         <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
                             aria-label="Tìm kiếm sản phẩm" aria-describedby="basic-addon2">
@@ -58,7 +62,7 @@
                                 class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
                 </div>
-                <div class="col-md-4 py-3">
+                <div class="col-md-4 col-sm-6 py-3">
                     <div class="row">
                         <div class="col">
                             <div class="row">
@@ -91,7 +95,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 py-3">
+                <div class="col-md-4  py-3">
                     <div class="row">
                         <div class="col">
                             <a href="#" class="position-relative">
@@ -134,13 +138,13 @@
             </div>
         </div>
     </section>
-    <!---Main menu-->
+    <!---Main menu---------------------------------------->
     <section class="mymainmenu bg-warning">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 text-dark py-3" id="danhmucsanpham">
                     <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                        aria-expanded="false">
                         <div class="row">
                             <div class="col-md-1"><i class="fa-solid fa-bars"></i></div>
                             <div class="col-md-11">Danh mục sản phẩm</div>
@@ -148,11 +152,11 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-submenu"><a class="dropdown-item" href="#">
-                            <div class="row">
-                                <div class="col-md-2"><i class="fa-solid fa-mobile"></i></div>
-                                <div class="col-md-10">Điện thoại</div>
-                            </div>
-                        </a>
+                                <div class="row">
+                                    <div class="col-md-2"><i class="fa-solid fa-mobile"></i></div>
+                                    <div class="col-md-10">Điện thoại</div>
+                                </div>
+                            </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">iPhone</a></li>
                                 <li><a class="dropdown-item" href="#">Samsung</a></li>
@@ -160,11 +164,11 @@
                             </ul>
                         </li>
                         <li class="dropdown-submenu"><a class="dropdown-item" href="#">
-                            <div class="row">
-                                <div class="col-md-2"><i class="fa-solid fa-laptop"></i></div>
-                                <div class="col-md-10">Laptop</div>
-                            </div>
-                        </a>
+                                <div class="row">
+                                    <div class="col-md-2"><i class="fa-solid fa-laptop"></i></div>
+                                    <div class="col-md-10">Laptop</div>
+                                </div>
+                            </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">MacBook</a></li>
                                 <li><a class="dropdown-item" href="#">Dell</a></li>
@@ -172,11 +176,11 @@
                             </ul>
                         </li>
                         <li class="dropdown-submenu"><a class="dropdown-item" href="#">
-                            <div class="row">
-                                <div class="col-md-2"><i class="fa-solid fa-headphones"></i></div>
-                                <div class="col-md-10">Phụ kiện</div>
-                            </div>
-                        </a>
+                                <div class="row">
+                                    <div class="col-md-2"><i class="fa-solid fa-headphones"></i></div>
+                                    <div class="col-md-10">Phụ kiện</div>
+                                </div>
+                            </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Tai nghe</a></li>
                                 <li><a class="dropdown-item" href="#">Bàn phím</a></li>
@@ -185,29 +189,29 @@
                         </li>
                         <hr>
                         <li><a class="dropdown-item" href="#">
-                            <div class="row">
-                                <div class="col-md-2"><i class="fa-solid fa-tv"></i></div>
-                                <div class="col-md-10">Tivi, Tủ lạnh, Điều hòa</div>
-                            </div>
-                        </a></li>
+                                <div class="row">
+                                    <div class="col-md-2"><i class="fa-solid fa-tv"></i></div>
+                                    <div class="col-md-10">Tivi, Tủ lạnh, Điều hòa</div>
+                                </div>
+                            </a></li>
                         <li><a class="dropdown-item" href="#">
-                            <div class="row">
-                                <div class="col-md-2"><i class="fa-solid fa-shower"></i></div>
-                                <div class="col-md-10">Máy giặt máy sấy,...</div>
-                            </div>
-                        </a></li>
+                                <div class="row">
+                                    <div class="col-md-2"><i class="fa-solid fa-shower"></i></div>
+                                    <div class="col-md-10">Máy giặt máy sấy,...</div>
+                                </div>
+                            </a></li>
                         <li><a class="dropdown-item" href="#">
-                            <div class="row">
-                                <div class="col-md-2"><i class="fa-solid fa-microchip"></i></div>
-                                <div class="col-md-10">PC, linh kiện PC</div>
-                            </div>
-                        </a></li>
+                                <div class="row">
+                                    <div class="col-md-2"><i class="fa-solid fa-microchip"></i></div>
+                                    <div class="col-md-10">PC, linh kiện PC</div>
+                                </div>
+                            </a></li>
                         <li><a class="dropdown-item" href="#">
-                            <div class="row">
-                                <div class="col-md-2"><i class="fa-solid fa-fan"></i></div>
-                                <div class="col-md-10">Quạt, quạt điều hòa, máy nước nóng</div>
-                            </div>
-                        </a></li>
+                                <div class="row">
+                                    <div class="col-md-2"><i class="fa-solid fa-fan"></i></div>
+                                    <div class="col-md-10">Quạt, quạt điều hòa, máy nước nóng</div>
+                                </div>
+                            </a></li>
                     </ul>
                 </div>
                 <!---Menu-->
@@ -259,7 +263,7 @@
             </div>
         </div>
     </section>
-    <!--Content here-->
+    <!--Content here------------------------------------->
     <section class="mymaincontent my-3">
         <div class="container">
             <!--Banner-->
@@ -466,8 +470,72 @@
                         </div>
                     </div>
                 </div>
+            
+            </div>
+
+            <!--tab product-->
+            <div class="tab_product">
+                <div class="row bg-body-secondary">
+                    <div class="col-4 p-0">
+                        <button id="cus_tab_btn1" class="btn w-100 d-flex flex-column align-items-center justify-content-center" style="background-color:#ed4e2e; height: 64px; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+                            <span class="fs-5 fw-semibold">Điện thoại</span>
+                            <span class="fs-6">Giảm ngay 10% khi mua online</span>
+                        </button>
+                    </div>
+                    <div class="col-4 p-0">
+                        <button id="cus_tab_btn2" class="btn w-100 d-flex flex-column align-items-center justify-content-center" style="height: 64px;  border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+                            <span class="fs-5 fw-semibold">Laptop</span>
+                            <span class="fs-6">Back to school</span>
+                        </button>
+                    </div>
+                    <div class="col-4 p-0">
+                        <button id="cus_tab_btn3" class="btn w-100 d-flex flex-column align-items-center justify-content-center" style="height: 64px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; ">
+                            <span class="fs-5 fw-semibold">Điện thoại</span>
+                            <span class="fs-6">Giảm ngay 10% khi mua online</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div id="tab_product_content_left" class="col-md-3 p-0" style="border-bottom-left-radius: 2%; height: 306px; background-color:#ed4e2e;">
+                            <img id="product_banner_left" src="images/banner/banner_dt.png" alt="" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        
+                       <div id="tab_product_content_right" class="col-md-9 " style="border-bottom-right-radius: 2%; background-color:#ed4e2e ;">
+                            <div class="row">
+                                <div class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div id="card_banner" class="card my-0" style="width: 18rem;">
+                                            <img src="..." class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                              <h5 class="card-title">Card title</h5>
+                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="item"><h4>2</h4></div>
+                                    <div class="item"><h4>3</h4></div>
+                                    <div class="item"><h4>4</h4></div>
+                                    <div class="item"><h4>5</h4></div>
+                                    <div class="item"><h4>6</h4></div>
+                                    <div class="item"><h4>7</h4></div>
+                                    <div class="item"><h4>8</h4></div>
+                                    <div class="item"><h4>9</h4></div>
+                                    <div class="item"><h4>10</h4></div>
+                                    <div class="item"><h4>11</h4></div>
+                                    <div class="item"><h4>12</h4></div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
-    <!--Footer-->
+    <!--Footer------------------------------------------->
     <section class="myfooter bg-body-secondary text-dark py-4">
         <div class="container">
             <div class="row">
@@ -690,8 +758,15 @@
                 'width': '150px',
                 'height': '150px'
             });
+
+            
+
+        
         });
 
+
+        
+        
 
     </script>
     <script>
