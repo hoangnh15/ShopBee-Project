@@ -15,36 +15,10 @@
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
     <script src="assets/vendors/jquery.min.js"></script>
     <script src="assets/owlcarousel/owl.carousel.js"></script>
+    
     <script src="custom/scripts.js"></script>
-    <style>
-        #danhmucsanpham .dropdown-toggle::after {
-            display: none;
-            /* Ẩn dấu mũi tên xổ xuống */
-
-        }
-
-        #danhmucsanpham .dropdown-menu {
-            width: 350px;
-            /* Chỉnh lại kích thước menu xổ xuống */
-        }
-
-        /* Tạo submenu cho các mục */
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: 0;
-            display: none;
-            position: absolute;
-        }
-
-        .dropdown-submenu:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="custom/styles.css">
+    
 </head>
 
 <body>
@@ -54,7 +28,7 @@
                 <div class="col-md-2 col-sm-3 py-3">
                     <img src="images/logo.png" class="img-fluid" alt="Logo" height="50px" width="150px">
                 </div>
-                <div class="col-md-2 col-sm-3 ">
+                <div class="col-md-3 col-sm-3 ">
                     <div class="input-group mb-3 py-3 ">
                         <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
                             aria-label="Tìm kiếm sản phẩm" aria-describedby="basic-addon2">
@@ -62,7 +36,7 @@
                                 class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 py-3">
+                <div class="col-md-3 col-sm-6 py-3">
                     <div class="row">
                         <div class="col">
                             <div class="row">
@@ -500,34 +474,69 @@
                         <div id="tab_product_content_left" class="col-md-3 p-0" style="border-bottom-left-radius: 2%; height: 306px; background-color:#ed4e2e;">
                             <img id="product_banner_left" src="images/banner/banner_dt.png" alt="" class="img-fluid w-100 h-100" style="object-fit: cover;">
                         </div>
-                        
-                       <div id="tab_product_content_right" class="col-md-9 " style="border-bottom-right-radius: 2%; background-color:#ed4e2e ;">
+                        <div id="tab_product_content_right" class="col-md-9" style="border-bottom-right-radius: 2%; background-color:#ed4e2e;">
                             <div class="row">
-                                <div class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div id="card_banner" class="card my-0" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div id="phoneContent" class="tab-content" style="display: block;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Samsung Galaxy Note S21
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
                                             </div>
-                                          </div>
+                                        </div>
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Samsung Galaxy Note S21
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="item"><h4>2</h4></div>
-                                    <div class="item"><h4>3</h4></div>
-                                    <div class="item"><h4>4</h4></div>
-                                    <div class="item"><h4>5</h4></div>
-                                    <div class="item"><h4>6</h4></div>
-                                    <div class="item"><h4>7</h4></div>
-                                    <div class="item"><h4>8</h4></div>
-                                    <div class="item"><h4>9</h4></div>
-                                    <div class="item"><h4>10</h4></div>
-                                    <div class="item"><h4>11</h4></div>
-                                    <div class="item"><h4>12</h4></div>
                                 </div>
+                                
+                                <div id="laptopContent" class="tab-content" style="display: none;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/laptop.png" alt="Dell XPS" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Dell XPS 13
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">35.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="tabletContent" class="tab-content" style="display: none;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/iphone12.png" alt="iphone12" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        iPhone12
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">15.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
-                       </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -715,6 +724,7 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    
     <script>
         $(document).ready(function () {
             // Khởi tạo carousel trước
@@ -758,39 +768,9 @@
                 'width': '150px',
                 'height': '150px'
             });
-
-            
-
-        
-        });
-
-
-        
-        
-
-    </script>
-    <script>
-        //mouse hover
-        document.addEventListener('DOMContentLoaded', function () {
-            var dropdown = document.getElementById('danhmucsanpham');
-
-            dropdown.addEventListener('mouseover', function () {
-                var dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                if (dropdownMenu) {
-                    var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
-                    bootstrapDropdown.show();
-                }
-            });
-
-            dropdown.addEventListener('mouseout', function () {
-                var dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                if (dropdownMenu) {
-                    var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
-                    bootstrapDropdown.hide();
-                }
-            });
         });
     </script>
+    
 </body>
 
 </html>
