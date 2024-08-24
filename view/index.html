@@ -474,35 +474,69 @@
                         <div id="tab_product_content_left" class="col-md-3 p-0" style="border-bottom-left-radius: 2%; height: 306px; background-color:#ed4e2e;">
                             <img id="product_banner_left" src="images/banner/banner_dt.png" alt="" class="img-fluid w-100 h-100" style="object-fit: cover;">
                         </div>
-                        
-                       <div id="tab_product_content_right" class="col-md-9 " style="height: 306px; border-bottom-right-radius: 2%; background-color:#ed4e2e ;">
+                        <div id="tab_product_content_right" class="col-md-9" style="border-bottom-right-radius: 2%; background-color:#ed4e2e;">
                             <div class="row">
-                                <div id= "tab_product carousel" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div id="card_banner" class="card my-3 mx-3" style="width: 18rem;">
-                                            <img src="/images/banner/iphone_15_pro_max_f589ed5358.png" class="card-img-top " alt="..." width="130px" height="160px">
-                                            <div class="card-body">
-                                              <h5 class="card-title " style="font-size: small;"><a href="#">Iphone 15 Promax 256GB VN/A</a></h5>
-                                              <div class="row">
-                                                <div class="col-md-6 text-decoration-line-through">
-                                                    <p style="font-size: x-small; ">34.990.000 đ</p> 
-                                                </div>
-                                                <div class="col text-danger "><p style="font-size: x-small;">-16% </p> </div>
-                                              </div>
-                                              <div class="row card-text" style="margin-top: -6%;">
-                                                    29.390.000 đ
-                                              </div>
-                                              
+                                <div id="phoneContent" class="tab-content" style="display: block;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Samsung Galaxy Note S21
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
                                             </div>
-                                          </div>
-                                        
+                                        </div>
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Samsung Galaxy Note S21
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    
-                                    <div class="item"><h4>3</h4></div>
-                                    
                                 </div>
+                                
+                                <div id="laptopContent" class="tab-content" style="display: none;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/laptop.png" alt="Dell XPS" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Dell XPS 13
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">35.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="tabletContent" class="tab-content" style="display: none;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/iphone12.png" alt="iphone12" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        iPhone12
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">15.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
-                       </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -734,24 +768,7 @@
                 'width': '150px',
                 'height': '150px'
             });
-
-            $('.owl-carousel #card_banner').height(maxHeight);
-
-            // Đảm bảo kích thước card là 150px x 150px
-            $('.owl-carousel #card_banner').css({
-                'width': '200px',
-                'height': '280px'
-            });
-
-            
-
-        
         });
-
-
-        
-        
-
     </script>
     
 </body>
