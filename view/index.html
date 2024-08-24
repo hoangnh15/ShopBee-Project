@@ -500,36 +500,69 @@
                         <div id="tab_product_content_left" class="col-md-3 p-0" style="border-bottom-left-radius: 2%; height: 306px; background-color:#ed4e2e;">
                             <img id="product_banner_left" src="images/banner/banner_dt.png" alt="" class="img-fluid w-100 h-100" style="object-fit: cover;">
                         </div>
-                        
-                       <div id="tab_product_content_right" class="col-md-9 " style="border-bottom-right-radius: 2%; background-color:#ed4e2e ;">
+                        <div id="tab_product_content_right" class="col-md-9" style="border-bottom-right-radius: 2%; background-color:#ed4e2e;">
                             <div class="row">
-                                <div class="owl-carousel owl-theme">
-                                    <div id="product_phone" class="item" style="background-color: white;">
-                                        <div class="item" style="text-align: center;">
-                                            <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
-                                            <h5 class="card-title" style="margin: 10px 0;">
-                                                <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
-                                                    Samsung Galaxy Note S21
-                                                </a>
-                                            </h5>
-                                            <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
+                                <div id="phoneContent" class="tab-content" style="display: block;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Samsung Galaxy Note S21
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    
-                                    <div id="product_laptop" class="item" style="background-color: white; display: none;">
-                                        <div class="item" style="text-align: center;">
-                                            <img src="images/laptop.png" alt="Dell XPS" style="max-width: 89%; height: auto; margin: 8px;">
-                                            <h5 class="card-title" style="margin: 10px 0;">
-                                                <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
-                                                    Dell XPS 13
-                                                </a>
-                                            </h5>
-                                            <p class="card-text" style="color: #d9534f; margin: 0;">35.000.000 VND</p>
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Samsung Galaxy Note S21
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <div id="laptopContent" class="tab-content" style="display: none;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/laptop.png" alt="Dell XPS" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Dell XPS 13
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">35.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="tabletContent" class="tab-content" style="display: none;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/iphone12.png" alt="iphone12" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        iPhone12
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">15.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
-                       </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -760,16 +793,7 @@
                 'width': '150px',
                 'height': '150px'
             });
-
-            
-
-        
         });
-
-
-        
-        
-
     </script>
     <script>
         //mouse hover
@@ -791,22 +815,6 @@
                     bootstrapDropdown.hide();
                 }
             });
-        });
-    </script>
-    <script>
-        document.getElementById("cus_tab_btn1").addEventListener("click", function() {
-            document.getElementById("product_phone").style.display = "block";
-            document.getElementById("product_laptop").style.display = "none";
-        });
-
-        document.getElementById("cus_tab_btn2").addEventListener("click", function() {
-            document.getElementById("product_phone").style.display = "none";
-            document.getElementById("product_laptop").style.display = "block";
-        });
-
-        document.getElementById("cus_tab_btn3").addEventListener("click", function() {
-            document.getElementById("product_phone").style.display = "block";
-            document.getElementById("product_laptop").style.display = "none";
         });
     </script>
 </body>
