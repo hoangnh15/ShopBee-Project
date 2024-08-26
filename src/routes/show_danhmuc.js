@@ -15,7 +15,7 @@ router.get('/:category', (req, res) =>{
         if (validCategories.includes(category)) {
             // Sử dụng chung template cho các danh mục hợp lệ
             console.log(category);
-            res.sendFile(path.join(__dirname, '/../view/show_detail_danhmuc.html'));
+            res.render('category');
         } else {
             // Xử lý khác hoặc trả về lỗi 404 nếu không hợp lệ
             res.status(404).send('Page not found');

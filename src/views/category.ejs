@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Phần head -->
+<%- include('partials/head') %>
+
+    <body data-bs-spy="scroll" data-bs-target="#leftSection" data-bs-offset="0" tabindex="0">
+        <!-- Phần header -->
+        <%- include('partials/header') %>
+
+            <section class="mymaincontent py-5">
+                <div class="container rounded" style="position: relative; height: 98%;">
+                    <div class="row">
+                        <!-- Left Section (sticky within container) -->
+                        <nav id="leftSection" class="col-md-3 bg-white rounded "
+                            style="position: sticky; top: 0; height: auto; overflow-y: auto;">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5 class="text-dark fs-4 pt-3"><i class="fa-solid fa-filter"></i> Bộ lọc tìm kiếm
+                                    </h5>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row px-3 ">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkedall" checked>
+                                    <label class="form-check-label" for="checkedall">
+                                        Tất cả
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="under2m">
+                                    <label class="form-check-label" for="under2m">
+                                        Dưới 2 triệu
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="from2to4">
+                                    <label class="form-check-label" for="from2to4">
+                                        Từ 2 - 4 triệu
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="from4to7">
+                                    <label class="form-check-label" for="from4to7">
+                                        Từ 4 - 7 triệu
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="from7to13">
+                                    <label class="form-check-label" for="from7to13">
+                                        Từ 7 - 13 triệu
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="from13to20">
+                                    <label class="form-check-label" for="from13to20">
+                                        Từ 13 - 20 triệu
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="above20">
+                                    <label class="form-check-label" for="from4to7">
+                                        Trên 20 triệu
+                                    </label>
+                                    <br>
+
+                                    <label for="priceRange" class="form-label">Hoặc nhập khoảng giá phù hợp với
+                                        bạn:</label>
+                                    <div class="row slider_container">
+                                        
+                                        <div class="col-md-12 d-flex align-items-center">
+                                            <div class="min-value numberVal">
+                                                <input id="inputMin" class="form-control me-2" type="number" min="0" max="60000000" value="390000"
+                                                 style="flex: 1;">
+                                            </div>
+                                            
+                                            <span class="mx-2">~</span>
+                                            <div class="max-value numberVal">
+                                                <input id="inputMax" class="form-control me-2" type="number" min="0" max="60000000" value="10000000"
+                                                 style="flex: 1;">
+                                            </div>
+                                            
+                                           
+                                        </div>
+                                        <p class="text-danger" id="waring-maxmin-text" style="font-size:smaller; display: none;">Giá trị không hợp lệ</p>
+                                        <div class="range-slider " id="ranger" >
+                                            <div class="progress" ></div>
+                                            <input type="range" class="range-min" min="0" max="60000000" value="390000">
+                                            <input type="range" class="range-max" min="0" max="60000000" value="10000000">
+                                        </div>
+                                    </div>
+                                   
+
+                                </div>
+                            </div>
+                        </nav>
+
+                        <!-- Right Section (scrollable content) -->
+                        <div class="col-md-8 bg-white rounded " id="left-pane"
+                            style="margin-left: 15px; height: auto; overflow-y: auto;">
+                            <div id="section1">
+                                <h5>Section 1</h5>
+                                <p>Content for section 1...</p>
+                            </div>
+                            <div id="section2">
+                                <h5>Section 2</h5>
+                                <p>Content for section 2...</p>
+                            </div>
+                            <div id="section3">
+                                <h5>Section 3</h5>
+                                <p>Content for section 3...</p>
+                            </div>
+                            <div id="section4">
+                                <h5>Section 4</h5>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta aspernatur iure velit
+                                    eius quas ducimus? Voluptate quisquam pariatur cupiditate maxime, sunt beatae
+                                    eligendi itaque laudantium odio est magni consequatur quam.
+                                    is eligendi doloribus, hic vitae. Qui aut facilis eveniet laborum corporis cum in
+                                    cupiditate labore tempora, pariatur deleniti ratione ipsam consequatur recusandae.
+                                    Cupiditate quidem possimus doloremque odio omnis optio. Officia, voluptatibus culpa
+                                    sed quod fuga inventore quia tenetur eveniet libero ut? Laboriosam amet totam
+                                    repudiandae laborum iusto enim officia atque exercitationem sunt.</p>
+                                <!-- Long content here -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Phần footer -->
+            <%- include('partials/footer') %>
+
+                <%- include('partials/signform') %>
+                    <script src="js/bootstrap.bundle.min.js"></script>
+                    <script src="/custom/slider_range.js"></script>
+
+
+    </body>
+
+</html>

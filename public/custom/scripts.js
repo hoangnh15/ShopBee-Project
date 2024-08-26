@@ -1,5 +1,6 @@
 //header danh muc san pham:
 
+
 //mouse hover
 document.addEventListener('DOMContentLoaded', function () {
     var dropdown = document.getElementById('danhmucsanpham');
@@ -66,4 +67,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-
