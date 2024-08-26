@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Phần head -->
+    <%- include('partials/head') %>
+
+<body>
+    <!-- Phần header -->
+    <%- include('partials/header') %>
+
+    <!-- Phần nội dung chính -->
+    <section class="mymaincontent my-3">
+        <div class="container">
+            <!--Banner-->
+            <div class="banner">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/home_slider_1.webp" class="d-block w-100" alt="..." width="1300px"
+                                height="482px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/home_slider_2.webp" class="d-block w-100" alt="..." width="1300px"
+                                height="482px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/slider_1.webp" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!--end of banner-->
+                <!--Danh muc san pham carousel-->
+                <div class="sub_danh_muc_sp py-3">
+                    <div class="large-12 columns">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Laptop</h5>
+                                        <img src="images/cate_img/laptop_cate_thumb_f8bef6898b.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Điện thoại</h5>
+                                        <img src="images/cate_img/Tren_20_trieu_cate_thumb_9464481b81.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Máy tính bảng</h5>
+                                        <img src="images/cate_img/may_tinh_bang_cate_thumb_00e3b3eefa.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Đồng hồ</h5>
+                                        <img src="images/cate_img/dong_ho_cate_thumb_fefdd822ba.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Phụ kiện điện tử</h5>
+                                        <img src="images/cate_img/phu_kien_cate_thumb_aab4ad136c.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tivi</h5>
+                                        <img src="images/cate_img/tivi_cate_thumb_a23c4a577b.png" alt="" height="100px"
+                                            width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Máy lạnh</h5>
+                                        <img src="images/cate_img/may_lanh_tu_lanh_cate_thumb_8251a4da68.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">PC lắp sẵn</h5>
+                                        <img src="images/cate_img/pc_cate_thumb_1bb3d9edde.png" alt="" height="100px"
+                                            width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Màn hình</h5>
+                                        <img src="images/cate_img/man_hinh_cate_thumb_f68d362f1e.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Linh kiện PC</h5>
+                                        <img src="images/cate_img/linh_kien_cate_thumb_4c25ebf717.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Máy giặt</h5>
+                                        <img src="images/cate_img/may_giat_cate_thumb_facc132260.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tủ lạnh</h5>
+                                        <img src="images/cate_img/tu_lanh_cate_thumb_77da11d0c4.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Máy lọc nước</h5>
+                                        <img src="images/cate_img/may_loc_nuoc_cate_thumb_d94bdb85d2.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quạt điều hòa</h5>
+                                        <img src="images/cate_img/quat_dieu_hoa_cate_thumb_907f7bf74c.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Điện gia dụng</h5>
+                                        <img src="images/cate_img/dien_gia_dung_cate_thumb_b41130e09c.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Máy cũ</h5>
+                                        <img src="images/cate_img/Duoi_2_trieu_cate_thumb_ac24e0a894.png" alt=""
+                                            height="100px" width="100px">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+            <!--tab product-->
+            <div class="tab_product">
+                <div class="row bg-body-secondary">
+                    <div class="col-4 p-0">
+                        <button id="cus_tab_btn1" class="btn w-100 d-flex flex-column align-items-center justify-content-center" style="background-color:#ed4e2e; height: 64px; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+                            <span class="fs-5 fw-semibold">Điện thoại</span>
+                            <span class="fs-6">Giảm ngay 10% khi mua online</span>
+                        </button>
+                    </div>
+                    <div class="col-4 p-0">
+                        <button id="cus_tab_btn2" class="btn w-100 d-flex flex-column align-items-center justify-content-center" style="height: 64px;  border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+                            <span class="fs-5 fw-semibold">Laptop</span>
+                            <span class="fs-6">Back to school</span>
+                        </button>
+                    </div>
+                    <div class="col-4 p-0">
+                        <button id="cus_tab_btn3" class="btn w-100 d-flex flex-column align-items-center justify-content-center" style="height: 64px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; ">
+                            <span class="fs-5 fw-semibold">Điện thoại</span>
+                            <span class="fs-6">Giảm ngay 10% khi mua online</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div id="tab_product_content_left" class="col-md-3 p-0" style="border-bottom-left-radius: 2%; height: 306px; background-color:#ed4e2e;">
+                            <img id="product_banner_left" src="images/banner/banner_dt.png" alt="" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div id="tab_product_content_right" class="col-md-9" style="border-bottom-right-radius: 2%; background-color:#ed4e2e;">
+                            <div class="row">
+                                <div id="phoneContent" class="tab-content" style="display: block;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Samsung Galaxy Note S21
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/dien-thoai-samsung-galaxy-s21-ultra-5g.png" alt="Samsung Galaxy Note S21" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Samsung Galaxy Note S21
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">29.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="laptopContent" class="tab-content" style="display: none;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/laptop.png" alt="Dell XPS" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        Dell XPS 13
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">35.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="tabletContent" class="tab-content" style="display: none;">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" style="background-color: white;">
+                                            <div class="item" style="text-align: center;">
+                                                <img src="images/iphone12.png" alt="iphone12" style="max-width: 89%; height: auto; margin: 8px;">
+                                                <h5 class="card-title" style="margin: 10px 0;">
+                                                    <a href="#" class="text-decoration-none text-dark" style="color: #000; text-decoration: none; font-size: small;">
+                                                        iPhone12
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text" style="color: #d9534f; margin: 0;">15.000.000 VND</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Phần footer -->
+    <%- include('partials/footer') %>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            // Khởi tạo carousel trước
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10, // Thêm khoảng cách giữa các item
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    540: {
+                        items: 2,
+                        nav: false
+                    },
+                    600: {
+                        items: 3,
+                        nav: false
+                    },
+                    1000: {
+                        items: 6,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            });
+
+            // Đảm bảo các card có chiều cao bằng nhau
+            var maxHeight = 0;
+            $('.owl-carousel .card').each(function () {
+                var thisHeight = $(this).outerHeight();
+                if (thisHeight > maxHeight) {
+                    maxHeight = thisHeight;
+                }
+            });
+            $('.owl-carousel .card').height(maxHeight);
+
+            // Đảm bảo kích thước card là 150px x 150px
+            $('.owl-carousel .card').css({
+                'width': '150px',
+                'height': '150px'
+            });
+        });
+    </script>
+    
+</body>
+</html>

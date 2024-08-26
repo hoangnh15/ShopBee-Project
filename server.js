@@ -1,23 +1,22 @@
 const express = require('express');
-
 const path = require('path');
 
 const app = express();
 
-const route_danhmuc = require('./route/show_danhmuc');
+// Thiết lập EJS làm view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/src/views'));
 
-app.get('/', (req, res) =>{
-    res.sendFile(path.join(__dirname,'/view/index.html'));
-} );
-// use boostrap
-app.use('/images', express.static(path.join(__dirname, 'view/images')));
-app.use('/css', express.static(path.join(__dirname, 'view/css')));
-app.use('/js', express.static(path.join(__dirname, 'view/js')));
-app.use('/assets', express.static(path.join(__dirname, 'view/assets')));
-app.use('/custom', express.static(path.join(__dirname, 'view/custom')));
+// Static files: Phục vụ tất cả các tệp tĩnh từ thư mục public
+app.use(express.static(path.join(__dirname, 'public')));
+
+const route_danhmuc = require('./src/routes/show_danhmuc');
+
+app.get('/', (req, res) => {
+    res.render('index');
+});
 
 app.use('/', route_danhmuc);
-
 
 app.listen(3000, () => {
     console.log('Server is running at PORT 3000');
