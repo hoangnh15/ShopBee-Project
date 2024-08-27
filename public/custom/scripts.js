@@ -41,8 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button3.style.backgroundColor = '#eaedf1';
         tab_content_left.style.backgroundColor = tab_content_right.style.backgroundColor = '#ed4e2e';
         product_banner_left.src = 'images/banner/banner_dt.png';
-        tab_content_right.innerHTML = phonecontent;
-    });
+        });
     button2.addEventListener('click', function(){
         laptopContent.style.display = 'block';
         phoneContent.style.display = 'none';
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
         button3.style.backgroundColor = '#eaedf1';
         tab_content_left.style.backgroundColor = tab_content_right.style.backgroundColor = '#ffd744';
         product_banner_left.src = 'images/banner/backtoschool.png';
-        tab_content_right.innerHTML = laptopcontent;
     });
     button3.addEventListener('click', function(){
         phoneContent.style.display = 'none';
@@ -63,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
         button1.style.backgroundColor = '#eaedf1';
         tab_content_left.style.backgroundColor = tab_content_right.style.backgroundColor = '#b3e3f0';
         product_banner_left.src = 'images/banner/banner_3_tab.webp';
-        tab_content_right.innerHTML = phonecontent;
     });
 
 });
