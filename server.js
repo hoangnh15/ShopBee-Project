@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, '/src/views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const route_danhmuc = require('./src/routes/show_danhmuc');
-const db = require('./config/database');
+const connection = require('./config/database');
 
 app.get('/', (req, res) => {
     res.render('index');

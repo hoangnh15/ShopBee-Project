@@ -29,8 +29,7 @@ connection.connect((err) => {
         return;
       }
       console.log('MySQL Version:', results[0]['VERSION()']);
-  
-      // Đóng kết nối
-      connection.end();
     });
   });
+  
+module.exports = connection;
