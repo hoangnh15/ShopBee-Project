@@ -1,0 +1,38 @@
+
+.slider_container .range-slider {
+    position: relative;
+    width: 400px;
+    height: 5px;
+    background: #ddd;
+    outline: none;
+    top: 1px;
+    margin: 10px;
+}
+
+.slider_container .range-slider .progress {
+   left: 4%;
+   right: 80%;
+   height: 100%;
+   background: #17a288 ;
+   border-radius: 50px;
+   position: absolute;
+}
+
+.slider_container .range-slider input[type="range"] {
+    position: absolute;
+    top: -6px;
+    left: -5px;
+    width: 101%;
+    -webkit-appearance: none;
+    pointer-events: none;
+    background: none;
+    outline: none;
+}
+.slider_container .range-slider input::-webkit-slider-thumb{
+    pointer-events: auto;
+    -webkit-appearance:  none;
+    width: 17px;
+    height: 17px;
+    background: #17a288;
+    border-radius: 50px;
+}

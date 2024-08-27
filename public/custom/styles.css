@@ -1,3 +1,7 @@
+body {
+    background-color: #f3f4f6; /* Replace with your desired color */
+}
+
 #danhmucsanpham .dropdown-toggle::after {
     display: none;
     /* Ẩn dấu mũi tên xổ xuống */
@@ -44,3 +48,13 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Tạo bóng đổ để làm nổi bật */
 }
+
+#left-pane::-webkit-scrollbar {
+    display: none;
+}
+
+.container-category .card::-webkit-scrollbar {
+    display: none;
+
+}
+
