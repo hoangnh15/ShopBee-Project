@@ -53,3 +53,8 @@ a {
     display: none;
 }
 
+.container-category .card::-webkit-scrollbar {
+    display: none;
+
+}
+

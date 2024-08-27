@@ -67,3 +67,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+//show more category
+document.addEventListener('DOMContentLoaded', function() {
+    const products = document.querySelectorAll('.product-item');
+    const seeMoreBtn = document.getElementById('see-more-btn');
+    let visibleCount = 6;
+
+    seeMoreBtn.addEventListener('click', function() {
+        const nextCount = visibleCount + 6;
+        for (let i = visibleCount; i < nextCount && i < products.length; i++) {
+            products[i].style.display = 'block';
+        }
+        visibleCount += 6;
+
+        // Ẩn nút "Xem thêm" nếu đã hiển thị hết sản phẩm
+        if (visibleCount >= products.length) {
+            seeMoreBtn.style.display = 'none';
+        }
+    });
+});

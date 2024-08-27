@@ -8,11 +8,11 @@
         <%- include('partials/header') %>
 
             <section class="mymaincontent py-5">
-                <div class="container rounded" style="position: relative; height: 98%;">
+                <div class="container rounded" style="position: relative; ">
                     <div class="row">
                         <!-- Left Section (sticky within container) -->
                         <nav id="leftSection" class="col-md-3 bg-white rounded "
-                            style="position: sticky; top: 0; height: auto; overflow-y: auto;">
+                            style="position: sticky; top: 0; height: auto; overflow-y: auto; height: 101%;">
                             <div class="row">
                                 <div class="col-md-12">
                                     <h5 class="text-dark fs-4 pt-3"><i class="fa-solid fa-filter"></i> Bộ lọc tìm kiếm
@@ -22,6 +22,7 @@
                             <hr>
                             <div class="row px-3 ">
                                 <div class="form-check ">
+                                    <p class="fw-bolder" style="margin-bottom: -0.1rem;">Mức giá</p>
                                     <input class="form-check-input" type="checkbox" value="" id="checkedall" checked>
                                     <label class="form-check-label" for="checkedall">
                                         Tất cả
@@ -58,66 +59,120 @@
                                     </label>
                                     <br>
 
-                                    <label for="priceRange" class="form-label">Hoặc nhập khoảng giá phù hợp với
-                                        bạn:</label>
+                                    <label for="priceRange" class="form-label">Hoặc nhập khoảng giá phù hợp:</label>
                                     <div class="row slider_container">
-                                        
+
                                         <div class="col-md-12 d-flex align-items-center">
                                             <div class="min-value numberVal">
-                                                <input id="inputMin" class="form-control me-2" type="number" min="0" max="60000000" value="390000"
-                                                 style="flex: 1;">
+                                                <input id="inputMin" class="form-control me-2" type="number" min="0"
+                                                    max="60000000" value="390000" style="flex: 1;">
                                             </div>
-                                            
+
                                             <span class="mx-2">~</span>
                                             <div class="max-value numberVal">
-                                                <input id="inputMax" class="form-control me-2" type="number" min="0" max="60000000" value="10000000"
-                                                 style="flex: 1;">
+                                                <input id="inputMax" class="form-control me-2" type="number" min="0"
+                                                    max="60000000" value="10000000" style="flex: 1;">
                                             </div>
-                                            
-                                           
+
+
                                         </div>
-                                        <p class="text-danger" id="waring-maxmin-text" style="font-size:smaller; display: none;">Giá trị không hợp lệ</p>
-                                        <div class="range-slider " id="ranger" >
-                                            <div class="progress" ></div>
+                                        <p class="text-danger" id="waring-maxmin-text"
+                                            style="font-size:smaller; display: none;">Giá trị không hợp lệ</p>
+                                        <div class="range-slider " id="ranger">
+                                            <div class="progress"></div>
                                             <input type="range" class="range-min" min="0" max="60000000" value="390000">
-                                            <input type="range" class="range-max" min="0" max="60000000" value="10000000">
+                                            <input type="range" class="range-max" min="0" max="60000000"
+                                                value="10000000">
                                         </div>
                                     </div>
-                                   
+
+                                    <hr> <!---Tách component-->
+                                    <p class="fw-bolder" style="margin-bottom: -0.1rem;">Màn hình</p>
+                                    <input class="form-check-input" type="checkbox" value="" id="screenall" checked>
+                                    <label class="form-check-label" for="screenall">
+                                        Tất cả
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="under5in">
+                                    <label class="form-check-label" for="under5in">
+                                        Dưới 5.0 inch
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="above6in">
+                                    <label class="form-check-label" for="above6in">
+                                        Trên 6.0 inch
+                                    </label>
+                                    <hr>
+                                    <p class="fw-bolder" style="margin-bottom: -0.1rem;">Hiệu năng pin</p>
+                                    <input class="form-check-input" type="checkbox" value="" id="pinall" checked>
+                                    <label class="form-check-label" for="pinall">
+                                        Tất cả
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="under3000mAh">
+                                    <label class="form-check-label" for="under3000mAh">
+                                        Dưới 3000 mAh
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="from3000to4000mAh">
+                                    <label class="form-check-label" for="from3000to4000mAh">
+                                        Pin từ 3000 - 4000 mAh
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="from4000to5000mAh">
+                                    <label class="form-check-label" for="from4000to5000mAh">
+                                        Pin từ 4000 - 5000 mAh
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="above5000mAh">
+                                    <label class="form-check-label" for="above5000mAh">
+                                        Siêu trâu: trên 5000 mAh
+                                    </label>
+                                    <br> <br><br>
 
                                 </div>
                             </div>
                         </nav>
 
                         <!-- Right Section (scrollable content) -->
-                        <div class="col-md-8 bg-white rounded " id="left-pane"
-                            style="margin-left: 15px; height: auto; overflow-y: auto;">
-                            <div id="section1">
-                                <h5>Section 1</h5>
-                                <p>Content for section 1...</p>
+                        <div class="col-md-8 bg-white rounded" id="left-pane"
+                        style="margin-left: 15px; height: auto; overflow-y: auto;">
+                        <!---Container card-->
+                        <div class="container py-5 container-category">
+                            <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
+                                <% products.forEach((product, index) => { %>
+                                <div class="col product-item" style="display: <%= index < 6 ? 'block' : 'none' %>;">
+                                    <div class="card" style="height: 350px; overflow-y: auto;">
+                                        <img src="<%= product.imageUrl %>" class="card-img-top" alt="Product Image"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="row origin_price" style="font-size: smaller;">
+                                                    <div class="col-9 text-decoration-line-through">
+                                                        <%= product.originalPrice %> đ
+                                                    </div>
+                                                    <div class="col-3 text-danger fw-bolder" style="margin-left: -40%;">
+                                                        -<%= product.discountPercent %>%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row sale_price">
+                                                <div class="col fw-bolder"><%= product.salePrice %> đ</div>
+                                            </div>
+                                            <h5 class="card-title fs-6"><%= product.name %></h5>
+                                            <p class="text-end"><i class="fa-solid fa-cart-plus"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }) %>
                             </div>
-                            <div id="section2">
-                                <h5>Section 2</h5>
-                                <p>Content for section 2...</p>
+                            <div class="text-center">
+                                <button id="see-more-btn" class="btn btn-primary mt-4">Xem thêm</button>
                             </div>
-                            <div id="section3">
-                                <h5>Section 3</h5>
-                                <p>Content for section 3...</p>
-                            </div>
-                            <div id="section4">
-                                <h5>Section 4</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta aspernatur iure velit
-                                    eius quas ducimus? Voluptate quisquam pariatur cupiditate maxime, sunt beatae
-                                    eligendi itaque laudantium odio est magni consequatur quam.
-                                    is eligendi doloribus, hic vitae. Qui aut facilis eveniet laborum corporis cum in
-                                    cupiditate labore tempora, pariatur deleniti ratione ipsam consequatur recusandae.
-                                    Cupiditate quidem possimus doloremque odio omnis optio. Officia, voluptatibus culpa
-                                    sed quod fuga inventore quia tenetur eveniet libero ut? Laboriosam amet totam
-                                    repudiandae laborum iusto enim officia atque exercitationem sunt.</p>
-                                <!-- Long content here -->
-                                </p>
-                            </div>
+                            
                         </div>
+                    </div>
+                     
                     </div>
                 </div>
             </section>
