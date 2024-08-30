@@ -1,6 +1,7 @@
 const mysql = require('mysql2');
 const fs = require('fs');
 require('dotenv').config();
+
 // Cấu hình kết nối
 const connection = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -12,25 +13,34 @@ const connection = mysql.createConnection({
       ca: fs.readFileSync(process.env.SSL_CA_PATH).toString(), 
       rejectUnauthorized: true 
     }
-  });
+});
 
 // Kết nối đến cơ sở dữ liệu
 connection.connect((err) => {
     if (err) {
-      console.error('Error connecting: ' + err.stack);
-      return;
+        console.error('Error connecting: ' + err.stack);
+        return;
     }
     console.log('Connected as id ' + connection.threadId);
-  
-    // Thực hiện truy vấn
+
+    // Thực hiện truy vấn phiên bản MySQL
     connection.query('SELECT VERSION()', (error, results) => {
-      if (error) {
-        console.error('Error executing query: ' + error.stack);
-        return;
-      }
-      console.log('MySQL Version:', results[0]['VERSION()']);
-  
-      // Đóng kết nối
-      connection.end();
+        if (error) {
+            console.error('Error executing query: ' + error.stack);
+            return;
+        }
+        console.log('MySQL Version:', results[0]['VERSION()']);
+
+        // Thực hiện truy vấn dữ liệu từ bảng Users
+        const query = 'SELECT * FROM Users';
+        connection.query(query, (err, results) => {
+            if (err) {
+                console.error('Error querying data: ' + err.stack);
+                return;
+            }
+            console.log('Data from Users table:', results);
+            // Đóng kết nối
+            connection.end();
+        });
     });
-  });
+});
