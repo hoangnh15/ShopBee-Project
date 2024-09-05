@@ -30,18 +30,6 @@ connection.connect((err) => {
             return;
         }
         console.log('MySQL Version:', results[0]['VERSION()']);
-
-        // Thực hiện truy vấn dữ liệu từ bảng Users
-        const query = 'SELECT * FROM Users';
-        connection.query(query, (err, results) => {
-            if (err) {
-                console.error('Error querying data: ' + err.stack);
-                return;
-            }
-            console.log('Data from Users table:', results);
-            // Đóng kết nối
-            connection.end();
-        });
     });
   });
   
