@@ -7,6 +7,11 @@ body {
     /* Ẩn dấu mũi tên xổ xuống */
 
 }
+#login_cluster.dropdown-toggle::after {
+    display: none;
+    /* Ẩn dấu mũi tên xổ xuống */
+
+}
 
 #danhmucsanpham .dropdown-menu {
     width: 350px;

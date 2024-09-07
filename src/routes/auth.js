@@ -12,13 +12,12 @@ router.post('/register', authController.register);
 router.get('/status', (req, res)=>{
     if(req.session && req.session.userId){
         res.status(200).json({
-            logggedIn: true,
+            loggedIn: true,
             username: req.session.username
         });
     } else{
         res.status(200).json({
-            logggedIn: false,
-            username: req.session
+            loggedIn: false
         });
     }
 });

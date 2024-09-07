@@ -9,18 +9,18 @@ exports.login = (req, res) => {
         }
 
         if (!user) {
-            return res.status(401).json({ message: 'User not found' });
+            return res.status(401).json({ message: 'Không tìm thấy người dùng!!' });
         }
 
         // So sánh mật khẩu trực tiếp
         if (password !== user.password) {
-            return res.status(401).json({ message: 'Invalid credentials' });
+            return res.status(401).json({ message: 'Sai mật khẩu đăng nhập !!!' });
         }
 
         // Lưu thông tin người dùng vào session
         req.session.userId = user.user_id;
         req.session.username = user.username;
-
+        console.log(`User ${username} login`);
         res.status(200).json({ message: 'Login successful'});
     });
 };

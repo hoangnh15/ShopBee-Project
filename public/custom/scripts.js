@@ -3,24 +3,32 @@
 
 //mouse hover
 document.addEventListener('DOMContentLoaded', function () {
-    var dropdown = document.getElementById('danhmucsanpham');
+    // Danh sách các ID phần tử cần áp dụng
+    var dropdownIds = ['danhmucsanpham', 'login_cluster'];
 
-    dropdown.addEventListener('mouseover', function () {
-        var dropdownMenu = dropdown.querySelector('.dropdown-menu');
-        if (dropdownMenu) {
-            var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
-            bootstrapDropdown.show();
-        }
-    });
+    dropdownIds.forEach(function (id) {
+        var dropdown = document.getElementById(id);
 
-    dropdown.addEventListener('mouseout', function () {
-        var dropdownMenu = dropdown.querySelector('.dropdown-menu');
-        if (dropdownMenu) {
-            var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
-            bootstrapDropdown.hide();
+        if (dropdown) {
+            dropdown.addEventListener('mouseover', function () {
+                var dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                if (dropdownMenu) {
+                    var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
+                    bootstrapDropdown.show();
+                }
+            });
+
+            dropdown.addEventListener('mouseout', function () {
+                var dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                if (dropdownMenu) {
+                    var bootstrapDropdown = new bootstrap.Dropdown(dropdown.querySelector('.dropdown-toggle'));
+                    bootstrapDropdown.hide();
+                }
+            });
         }
     });
 });
+
 
 
 
