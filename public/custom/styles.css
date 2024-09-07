@@ -62,4 +62,12 @@ a {
     display: none;
 
 }
+/*list group color*/
 
+.list-group-item {
+    border-color: white;
+    
+}
+.list-group-item:hover {
+    background-color: #FCF0CF;
+}

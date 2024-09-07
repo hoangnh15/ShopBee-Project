@@ -108,14 +108,14 @@ $(document).ready(function () {
     });
 
     //logout 
-    $('#logoutButton').click(function(event) {
+    $('.logoutButton').click(function(event) {
         event.preventDefault();
         $.ajax({
             url: '/auth/logout',
             method: 'POST',
             success: function(response){
                 alert('Đăng xuất thành công!');
-                window.location.reload();
+                window.location.href = '/';
 
             },
             error: function(error){

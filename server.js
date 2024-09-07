@@ -26,7 +26,9 @@ app.get('/', (req, res) => {
 // use route:
 const route_category = require('./src/routes/show_category');
 const authRoutes = require('./src/routes/auth');
+const custom_info = require('./src/routes/customerInfo');
 app.use('/auth', authRoutes);
+app.use('/',custom_info);
 app.use('/', route_category);
 app.listen(3000, () => {
     console.log('Server is running at PORT 3000');

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Phần head -->
+<%- include('partials/head') %>
+
+    <body data-bs-spy="scroll" data-bs-target="#leftSection" data-bs-offset="0" tabindex="0">
+        <!-- Phần header -->
+        <%- include('partials/header') %>
+
+            <section class="mymaincontent py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <div class="row bg-white rounded">
+                               <div class="container">
+                                <div class="row">
+                                    <div class="col-auto py-1">
+                                        <i class="fa-solid fa-circle-user fs-1" style="color: #FCF0CF;"></i>
+                                    </div>
+                                    <div class="col-auto py-1 fs-4"><%= user.fullname%> </div>
+ 
+                                </div>
+                                <div class="row mx-1 mb-3 rounded"  style="background-color: #FCF0CF;">
+                                    <div class="col-md-8">
+                                        <p>Quý khách chưa là thành viên ? </p>
+                                        <p style="font-size:smaller; margin-top: -5%;"> Đăng ký thành viên BeeBee tại đây để nhận điểm thưởng</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="/images/membershipcard.png" class="img-fluid my-3" alt="">
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-md-6">
+                                            <button type="button" class="btn btn-warning btn-sm rounded-pill" >Đăng ký ngay</button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a class="icon-link icon-link-hover" href="#" style="color: #8AC0DE;">
+                                                Xem thể lệ
+                                                <i class="fa-duotone fa-solid fa-greater-than bi fw-light" aria-hidden="true"><use xlink:href="#arrow-right"></use></i>
+                                                
+                                              </a>
+                                        </div>
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                            
+                            <div class="row bg-white rounded my-3">
+                                <div class="list-group mx-2" >
+                                    <a href="#" class="list-group-item list-group-item-action" >Đơn hàng của tôi</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Khách hàng thân thiết</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Sổ địa chỉ nhận hàng</a>
+                                    <a href="/" class="list-group-item list-group-item-action logoutButton" >Đăng xuất</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-8  ms-3">
+                            <div class="row">
+                                <h1>Thông tin cá nhân</h1>
+                            </div>
+                            <div class="row bg-white rounded">
+                                <div class="container">
+                                    <div class="row py-3">
+                                        <i class="fa-solid fa-circle-user text-center" style="color: #FCF0CF; font-size: 500%;"></i>
+                                    </div>
+                                    <div class="row mx-3 p-4 rounded d-flex justify-content-center">
+                                        <form style="width: 100%; max-width: 500px;" id="informationForm">
+                                            <div class="mb-3">
+                                                <label for="fullName" class="form-label">Họ và tên</label>
+                                                <input type="text" class="form-control" id="fullName" name="full_name" placeholder="Nhập họ và tên" value="<%= user.fullname %>">
+                                            </div>
+                                    
+                                            <div class="mb-3">
+                                                <label for="phone" class="form-label">Số điện thoại</label>
+                                                <input type="text" class="form-control" id="phone" name="phone_number" placeholder="Nhập số điện thoại" value="<%= user.phone_number %>">
+                                            </div>
+                                    
+                                            <div class="mb-3">
+                                                <label class="form-label">Giới tính</label><br>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" id="male" value="0" <% if (user.gender === 0) { %> checked <% } %>>
+                                                    <label class="form-check-label" for="male">Nam</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" id="female" value="1" <% if (user.gender === 1) { %> checked <% } %>>
+                                                    <label class="form-check-label" for="female">Nữ</label>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="mb-3">
+                                                <label class="form-label">Ngày sinh</label><br>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <input type="number" class="form-control" id="day" name="dob_day" placeholder="Ngày" min="1" max="31" value="<%= user.dob_day %>">
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="number" class="form-control" id="month" name="dob_month" placeholder="Tháng" min="1" max="12" value="<%= user.dob_month %>">
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="number" class="form-control" id="year" name="dob_year" placeholder="Năm" min="1900" max="2100" value="<%= user.dob_year %>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email" value="<%= user.email %>">
+                                            </div>
+                                    
+                                            <div class="d-grid gap-2">
+                                                <button type="submit" class="btn btn-warning">Cập nhật thông tin</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Phần footer -->
+            <%- include('partials/footer') %>
+            <%- include('partials/toastLogin') %>
+
+            <%- include('partials/signform') %>
+                    <script src="js/bootstrap.bundle.min.js"></script>
+                    <script src="/custom/slider_range.js"></script>
+                    <script src="/services/customInfoServices.js"></script>
+
+
+    </body>
+
+</html>
