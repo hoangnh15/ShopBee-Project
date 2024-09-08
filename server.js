@@ -8,6 +8,12 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+//CORS:
+app.use(cors());
+
+
+
+
 // Thiết lập EJS làm view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views'));

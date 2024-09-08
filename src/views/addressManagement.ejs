@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Phần head -->
+<%- include('partials/head') %>
+
+<body data-bs-spy="scroll" data-bs-target="#leftSection" data-bs-offset="0" tabindex="0">
+  <!-- Phần header -->
+  <%- include('partials/header') %>
+
+  <section class="mymaincontent py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 ">
+          <div class="row bg-white rounded">
+            <div class="container">
+              <div class="row">
+                <div class="col-auto py-1">
+                  <i class="fa-solid fa-circle-user fs-1" style="color: #FCF0CF;"></i>
+                </div>
+                <div class="col-auto py-1 fs-4">
+                  <%= !user.fullname ? 'Nguyen Van A' : user.fullname %>
+                </div>
+              </div>
+              <div class="row mx-1 mb-3 rounded" style="background-color: #FCF0CF;">
+                <div class="col-md-8">
+                  <p>Quý khách chưa là thành viên ? </p>
+                  <p style="font-size:smaller; margin-top: -5%;"> Đăng ký thành viên BeeBee tại đây để nhận điểm thưởng</p>
+                </div>
+                <div class="col-md-4">
+                  <img src="/images/membershipcard.png" class="img-fluid my-3" alt="">
+                </div>
+                <div class="row pb-2">
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-warning btn-sm rounded-pill">Đăng ký ngay</button>
+                  </div>
+                  <div class="col-md-6">
+                    <a class="icon-link icon-link-hover" href="#" style="color: #8AC0DE;">
+                      Xem thể lệ
+                      <i class="fa-duotone fa-solid fa-greater-than bi fw-light" aria-hidden="true">
+                        <use xlink:href="#arrow-right"></use>
+                      </i>
+
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row bg-white rounded my-3">
+            <div class="list-group mx-2">
+              <a href="#" class="list-group-item list-group-item-action">Đơn hàng của tôi</a>
+              <a href="#" class="list-group-item list-group-item-action">Khách hàng thân thiết</a>
+              <a href="/quan-ly-dia-chi" class="list-group-item list-group-item-action">Sổ địa chỉ nhận hàng</a>
+              <a href="/" class="list-group-item list-group-item-action logoutButton">Đăng xuất</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-8  ms-3">
+          <div class="row">
+            <h1>Quản lý địa chỉ nhận hàng</h1>
+            <% if (Object.keys(addresses).length === 0) { %>
+            <div class="row justify-content-center align-items-center text-center" style="min-height: 200px;">
+              <div class="col">
+                <img src="/images/address-removebg.png" alt="" style="width: 25%; margin-top: 5%;">
+                <div class="row" style="margin-top: 5%;">
+                  <p style="font-size: x-large;">Bạn chưa lưu địa chỉ nào</p>
+                  <p style="font-size: large;">Cập nhật địa chỉ ngay để có trải nghiệm mua hàng <br>nhanh nhất.</p>
+                </div>
+                <div class="col">
+                  <button type="button" class="btn btn-warning btn-sm rounded-pill fs-5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Thêm địa chỉ mới</button>
+                </div>
+              </div>
+            </div>
+            <% } else { %>
+            <% addresses.forEach(function(address) { %>
+
+            <div class="row">
+              <div class="col-12 bg-white rounded py-3 my-2">
+                <div class="row">
+                  <div class="col-2">
+                    <% if(address.type === 'Nhà'){ %>
+                    <i class="fa-solid fa-house-user icon-circle"></i>
+                    <% } else { %>
+                    <i class="fa-regular fa-building icon-circle"></i>
+                    <% } %>
+
+                  </div>
+                  <div class="col-10">
+                    <div class="row">
+                      <div class="col-9 " style="margin-left: -10%;">
+                        <div class="row">
+                          <div class="col-7"><%= address.fullname %> | <%= address.phone_number %> </div>
+                          <% if(address.isDefault === 1){ %>
+                          <div class="col-5 ms-0 border border-danger rounded-5 bg-danger-subtle text-danger ms-0" style="margin-left: -10px; width: 100px; text-align: center;">Mặc định</div>
+                          <% } %>
+
+                        </div>
+                        <div class="row">
+                          <div class="col"><%= address.detail_addr  %></div>
+                        </div>
+                      </div>
+                      <div class="col-3 text-end ">
+                        <div class="row py-3">
+                          <div class="col-5"></div>
+                          <div class="col-3 text-danger fw-semibold update_addr" data-fullname="<%= address.fullname %>" data-phonenumber="<%= address.phone_number %>" data-province="<%= address.province %>" data-district="<%= address.district %>" data-ward="<%= address.ward %>" data-detail-addr="<%= address.detail_addr %>" data-type="<%= address.type %>" data-is-default="<%= address.isDefault %>" data-address-id="<%= address.address_id %>" data-user-id="<%= address.user_id %>" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightUpdate" aria-controls="offcanvasRightUpdate">
+                            Sửa
+                          </div>
+                          <div class="col-1 px-0">|</div>
+                          <div class="col-3 text-end fw-semibold delete_addr">Xóa</div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <% }); %>
+
+
+
+
+            <% } %>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Phần footer -->
+  <%- include('partials/footer') %>
+  <%- include('partials/toastLogin') %>
+
+  <%- include('partials/signform') %>
+  <%- include('partials/offcanvas_address') %>
+  <%- include('partials/offcanvas_address_update') %>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="/custom/slider_range.js"></script>
+  <script src="/services/customInfoServices.js"></script>
+  <script src="/services/addressSelection.js"></script>
+
+
+</body>
+
+</html>

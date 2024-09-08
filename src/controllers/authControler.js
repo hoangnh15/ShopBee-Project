@@ -18,8 +18,10 @@ exports.login = (req, res) => {
         }
 
         // Lưu thông tin người dùng vào session
+        console.log(user);
         req.session.userId = user.user_id;
         req.session.username = user.username;
+        req.session.fullname = user.full_name;
         console.log(`User ${username} login`);
         res.status(200).json({ message: 'Login successful'});
     });

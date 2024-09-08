@@ -1,12 +1,12 @@
 $(document).ready(function() {
     $('#informationForm').on('submit', function(event) {
-      event.preventDefault(); // Ngăn chặn hành vi submit mặc định của form
+      event.preventDefault();
   
       // Lấy dữ liệu từ form và chuyển đổi thành JSON
       const formData = {
         full_name: $('#fullName').val(),
         phone_number: $('#phone').val(),
-        gender: $('input[name="gender"]:checked').val(), // Lấy giá trị của radio button được chọn
+        gender: $('input[name="gender"]:checked').val(), 
         dob_day: $('#day').val(),
         dob_month: $('#month').val(),
         dob_year: $('#year').val(),
@@ -18,7 +18,7 @@ $(document).ready(function() {
         url: '/cap-nhat-thong-tin',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(formData), // Chuyển đổi đối tượng JSON thành chuỗi
+        data: JSON.stringify(formData), 
         success: function(response) {
           console.log('Success:', response);
           alert('Thông tin đã được cập nhật!');

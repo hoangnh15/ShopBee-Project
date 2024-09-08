@@ -1,0 +1,76 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Thêm địa chỉ mới</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Nội dung form nhập địa chỉ -->
+    <form id="addressForm">
+      <div class="mb-3">
+        <h2 class="fs-6">Thông tin người nhận</h2>
+        <label for="recipientName" class="form-label">Họ và tên</label>
+        <input type="text" class="form-control" id="recipientName" name="fullname" placeholder="Nhập họ tên">
+      </div>
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Số điện thoại</label>
+        <input type="text" class="form-control" id="phoneNumber" name="phone_number" placeholder="Nhập số điện thoại">
+      </div>
+      <hr>
+      <h2 class="fs-6">Địa chỉ nhận hàng</h2>
+      <div class="mb-3">
+        <label for="province" class="form-label">Tỉnh/Thành phố</label>
+        <select id="province" class="form-select province" aria-label="Tỉnh/Thành phố" name="province">
+          <option value="">Chọn Tỉnh/Thành phố</option>
+
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="district" class="form-label">Quận/Huyện</label>
+        <select id="district" class="form-select district" aria-label="Quận/Huyện" name="district">
+          <option value="">Chọn Quận/Huyện</option>
+
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="ward" class="form-label">Phường/Xã</label>
+        <select id="ward" class="form-select ward" aria-label="Phường/Xã" name="ward">
+          <option value="" >Chọn Phường/Xã</option>
+
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="detail_addr" class="form-label">Địa chỉ cụ thể</label>
+        <input type="text" class="form-control" id="detail_addr" name="detail_addr" placeholder="Số nhà, đường, khu phố,...">
+      </div>
+      <div class="mb-3">
+        Loại địa chỉ
+        <div class="btn-group " role="group" aria-label="Type" >
+          <input type="radio" class="btn-check" name="type" id="type1" value="Nhà">
+          <label class="btn btn-outline-warning rounded" for="type1" style="margin-left: 10px; margin-right: 10px;">
+            Nhà
+          </label>
+      
+          <input type="radio" class="btn-check" name="type" id="type2" value="Văn phòng">
+          <label class="btn btn-outline-warning  rounded" for="type2">
+            Văn phòng
+          </label>
+        </div>
+
+      </div>
+      <hr>
+      <div class="mb-3">
+        <div class="form-check form-switch form-check-reverse">
+            <label class="form-check-label" for="defaultaddr">Đặt làm địa chỉ mặc định</label>
+            <input class="form-check-input" type="checkbox" name="isDefault" role="switch" id="defaultaddr">
+        </div>
+      </div>
+      
+      
+
+
+
+
+      <button type="submit" class="btn btn-primary">Lưu địa chỉ</button>
+    </form>
+  </div>
+</div>

@@ -71,3 +71,17 @@ a {
 .list-group-item:hover {
     background-color: #FCF0CF;
 }
+
+.icon-circle {
+    display: inline-block;
+    padding: 10px; 
+    border: 2px solid #f3e4bd;
+    border-radius: 50%; 
+    text-align: center;
+    width: 60px; 
+    height: 60px; 
+    line-height: 40px; 
+    color: #f1bf35; 
+    background-color: #f3e4bd; 
+    font-size: x-large;
+}
