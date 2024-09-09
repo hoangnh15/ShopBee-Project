@@ -1,6 +1,7 @@
 const mysql = require('mysql2');
 const fs = require('fs');
 require('dotenv').config();
+const mongoose = require('mongoose');
 
 // Cấu hình kết nối
 const connection = mysql.createConnection({
@@ -32,5 +33,11 @@ connection.connect((err) => {
         console.log('MySQL Version:', results[0]['VERSION()']);
     });
   });
-  
+mongoose.connect("mongodb+srv://shopbee:shopbee@shopbee.9jkd5.mongodb.net/")
+  .then(() => {
+      console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+      console.log("Error connecting to MongoDB", err);
+  });
 module.exports = connection;
