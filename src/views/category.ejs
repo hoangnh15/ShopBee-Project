@@ -135,43 +135,40 @@
                         </nav>
 
                         <!-- Right Section (scrollable content) -->
-                        <div class="col-md-8 bg-white rounded" id="left-pane"
-                        style="margin-left: 15px; height: auto; overflow-y: auto;">
-                        <!---Container card-->
-                        <div class="container py-5 container-category">
-                            <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
-                                <% products.forEach((product, index) => { %>
-                                <div class="col product-item" style="display: <%= index < 6 ? 'block' : 'none' %>;">
-                                    <div class="card" style="height: 350px; overflow-y: auto;">
-                                        <img src="<%= product.imageUrl %>" class="card-img-top" alt="Product Image"
-                                            style="height: 200px; object-fit: cover;">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="row origin_price" style="font-size: smaller;">
-                                                    <div class="col-9 text-decoration-line-through">
-                                                        <%= product.originalPrice %> đ
-                                                    </div>
-                                                    <div class="col-3 text-danger fw-bolder" style="margin-left: -40%;">
-                                                        -<%= product.discountPercent %>%
+                        <div class="col-md-8 bg-white rounded" id="left-pane" style="margin-left: 15px; height: auto; overflow-y: auto;">
+                            <!---Container card-->
+                            <div class="container py-5 container-category">
+                                <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
+                                    <% products.forEach((product, index) => { %>
+                                    <div class="col product-item" style="display: <%= index < 6 ? 'block' : 'none' %>;">
+                                        <div class="card" style="height: 350px; overflow-y: auto;">
+                                            <img src="<%= product.image_url %>" class="card-img-top" alt="Product Image" style="height: 200px; object-fit: cover;">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="row origin_price" style="font-size: smaller;">
+                                                        <div class="col-9 text-decoration-line-through">
+                                                            <%= product.originalPrice %> đ
+                                                        </div>
+                                                        <div class="col-3 text-danger fw-bolder" style="margin-left: -40%;">
+                                                            -<%= product.discountPercent %>%
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <div class="row sale_price">
+                                                    <div class="col fw-bolder"><%= product.salePrice %> đ</div>
+                                                </div>
+                                                <h5 class="card-title fs-6"><%= product.product_name %></h5>
+                                                <p class="text-end"><i class="fa-solid fa-cart-plus"></i></p>
                                             </div>
-                                            <div class="row sale_price">
-                                                <div class="col fw-bolder"><%= product.salePrice %> đ</div>
-                                            </div>
-                                            <h5 class="card-title fs-6"><%= product.name %></h5>
-                                            <p class="text-end"><i class="fa-solid fa-cart-plus"></i></p>
                                         </div>
                                     </div>
+                                    <% }) %>
                                 </div>
-                                <% }) %>
+                                <div class="text-center">
+                                    <button id="see-more-btn" class="btn btn-primary mt-4">Xem thêm</button>
+                                </div>
                             </div>
-                            <div class="text-center">
-                                <button id="see-more-btn" class="btn btn-primary mt-4">Xem thêm</button>
-                            </div>
-                            
                         </div>
-                    </div>
                      
                     </div>
                 </div>
