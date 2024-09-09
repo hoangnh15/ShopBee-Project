@@ -57,4 +57,6 @@ router.get('/quan-ly-dia-chi',(req, res) => {
 
 router.post('/them-dia-chi',addressController.insertAddress);
 
+router.delete('/xoa-dia-chi/:id',addressController.deleteAddress);
+
 module.exports = router;

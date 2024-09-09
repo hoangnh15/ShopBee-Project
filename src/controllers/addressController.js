@@ -56,3 +56,30 @@ exports.updateAddress = (req, res) => {
 
     
 };
+
+exports.deleteAddress = (req, res) =>{
+    const user_id = parseInt(req.session.userId) ;
+    const address_id = parseInt(req.params.id);
+    if(!req.session.userId) {
+        return res.status(400).json({message:"Bạn chưa đăng nhập!!"});
+    }
+    else {
+        addressModel.addressGetByUser(user_id,(err, results)=>{
+            if (err) {
+                return res.status(500).json({message:`Database error ${err}`});
+            }
+            var isMatch =  (results.find(addr => addr.user_id === user_id && addr.address_id === address_id)) ? true : false;
+            if(!isMatch){
+                return res.status(400).json({message:"Hành động không hợp lệ!"});
+
+            }
+            addressModel.deleteAddress(address_id,(err, results)=>{
+                if (err) {
+                    return res.status(500).json({message:`Database error ${err}`});
+                }
+                res.status(200).json({message:"Đã xóa địa chỉ!"});
+            });
+            
+        });
+    }
+};
