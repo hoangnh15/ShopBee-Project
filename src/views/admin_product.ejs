@@ -19,6 +19,13 @@
                                 </h5>
                             </div>
                         </div>
+                        <div class="row bg-white rounded my-3">
+                            <div class="list-group " >
+                                <a href="#" class="list-group-item list-group-item-action" >QL Sản phẩm</a>
+                                <a href="#" class="list-group-item list-group-item-action">QL phân loại hàng</a>
+                                <a href="#" class="list-group-item list-group-item-action">QL Khác</a>
+                                <a href="#" class="list-group-item list-group-item-action logoutButton" >Đăng xuất</a>
+                            </div>
                         <hr>
                         
                         
@@ -32,6 +39,7 @@
                         <%  products = JSON.parse(products); %>
                         <%  brands= JSON.parse(brands); %>
                         <%  categories= JSON.parse(categories); %>
+                        <%  attributes= JSON.parse(attributes); %>
                         <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
                             <table class="table table-bordered table-hover ">
                                 <thead>
@@ -103,7 +111,47 @@
                                             </td>
                                           </tr>
                                         <%}) %>
-                                  
+                                        <tr>
+                                            <td>--</td>
+                                            <td contenteditable="true" >...</td>
+                                            <td>
+                                                <select class="form-select" id="choose_brand">
+                                                  <option value="">Choose Brand</option>
+                                                  <% brands.forEach(function(brand) { %>
+                                                    <option value="<%= brand.brand_id %>" >
+                                                      <%= brand.brand_name %>
+                                                    </option>
+                                                  <% }) %>
+                                                </select>
+                                              </td>
+                                              
+                                            <td ><select class="form-select" id="choose_category">
+                                                <option value="">Choose Category</option>
+                                                <% categories.forEach(function(category) { %>
+                                                    <option value="<%= category.category_id %>" >
+                                                      <%= category.category_name %>
+                                                    </option>
+                                                  <% }) %>
+                                            </select></td>
+                                            <!--Loại chưa xem xét-->
+                                            <td >
+                                                Unable
+                                            </td>
+                                            <td contenteditable="true">...</td>
+                                            <td contenteditable="true">...</td>
+                                            <td>
+                                                /
+                                              </td>                                              
+                                            <td contenteditable="true">...</td>
+                                            <td contenteditable="true">...</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col"><button type="button" class="btn btn-info" id="add_oneProduct">+</button> </div>
+                                                    
+                                                    
+                                                </div>
+                                            </td>
+                                          </tr>
                                   <!-- More rows as needed -->
                                   
                                 </tbody>

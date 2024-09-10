@@ -7,6 +7,9 @@ module.exports = {
     secret: 'your-secret-key',
     resave: false,
     saveUninitialized: false,
-    store: new RedisStore({ client: redisClient }),
-    cookie: { maxAge: 60 * 60 * 1000 } 
+    store: new RedisStore({
+        client: redisClient,
+        ttl: 30 * 60
+    }),
+    cookie: { maxAge: 30 * 60 * 1000 } 
 };
