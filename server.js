@@ -33,6 +33,8 @@ app.get('/', (req, res) => {
 const route_category = require('./src/routes/show_category');
 const authRoutes = require('./src/routes/auth');
 const custom_info = require('./src/routes/customerInfo');
+const admin_product = require('./src/routes/admin_product');
+app.use('/', admin_product);
 app.use('/auth', authRoutes);
 app.use('/',custom_info);
 app.use('/', route_category);

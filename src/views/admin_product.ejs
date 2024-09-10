@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Phần head -->
+<%- include('partials/head') %>
+
+    <body data-bs-spy="scroll" data-bs-target="#leftSection" data-bs-offset="0" tabindex="0">
+        <!-- Phần header -->
+        <%- include('partials/header') %>
+
+        <section class="mymaincontent py-5">
+            <div class="container-fluid rounded" style="position: relative; ">
+                <div class="row">
+                    <!-- Left Section (sticky within container) -->
+                    <nav id="leftSection" class="col-md-2 bg-white rounded ms-5 "
+                        style="position: sticky; top: 0; height: auto; overflow-y: auto; height: 101%;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5 class="text-dark fs-4 pt-3"><i class="fa-solid fa-filter"></i>Quản lý sản phẩm
+                                </h5>
+                            </div>
+                        </div>
+                        <hr>
+                        
+                        
+                    </nav>
+
+                    <!-- Right Section (scrollable content) -->
+                    <div class="col-md-9 bg-white rounded" id="left-pane"
+                    style="margin-left: 15px; height: auto; overflow-y: auto;">
+                    <!---Container card-->
+                    <div class="container py-5 container-category">
+                        <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
+                            <table class="table table-bordered table-hover ">
+                                <thead>
+                                  <tr>
+                                    <th scope=>STT</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Brand</th>
+                                    <th>Danh mục</th>
+                                    <th>Loại</th>
+                                    <th>Giá gốc</th>
+                                    <th>% Giảm</th>
+                                    <th>Giá hiện tại</th>
+                                    <th>In stock</th>
+                                    <th>Mô tả</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <%  products = JSON.parse(products); %>
+                                    <% const firstProduct = products[1]; %>
+                                    <p>Product Name: <%= firstProduct.attributes[0].attr_name %></p>
+                                    <td contenteditable="true">1</td>
+                                    <td contenteditable="true">Iphone 15</td>
+                                    <td ><select class="form-select" id="choose_brand">
+                                        <option value="">Choose Brand</option>
+                                    </select></td>
+                                    <td ><select class="form-select" id="choose_category">
+                                        <option value="">Choose Category</option>
+                                    </select></td>
+                                    <td >Đen-128GB</td>
+                                    <td contenteditable="true">15000000</td>
+                                    <td contenteditable="true">10%</td>
+                                    <td >13500000</td>
+                                    <td contenteditable="true">5</td>
+                                    <td contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-6 text-danger fw-semibold" >Sửa</div>
+                                            <div class="col-6 text-warning fw-semibold">Xóa</div>
+                                        </div>
+                                    </td>
+                                  </tr>
+                                  <!-- More rows as needed -->
+                                  
+                                </tbody>
+                              </table>
+                              
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                 
+                </div>
+            </div>
+        </section>
+
+
+            <!-- Phần footer -->
+            <%- include('partials/footer') %>
+            <%- include('partials/toastLogin') %>
+
+            <%- include('partials/signform') %>
+                    <script src="js/bootstrap.bundle.min.js"></script>
+                    <script src="/custom/slider_range.js"></script>
+                    <script src="/services/customInfoServices.js"></script>
+
+
+    </body>
+
+</html>
