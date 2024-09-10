@@ -94,3 +94,13 @@ exports.updateAddress = (address_id, userData, callback) => {
 };
 
 
+exports.deleteAddress = (address_id,callback) => {
+    address_id = parseInt(address_id);
+    connection.query('DELETE FROM Addresses WHERE address_id = ?', [address_id], (err, results) => {
+        if (err) {
+          return callback(err, null);
+        }
+        return callback(null, results);
+      });
+
+};

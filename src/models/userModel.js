@@ -40,3 +40,12 @@ exports.updateUserInfomation =(userId, userData, callback) => {
     return callback(null, results);
   });
 };
+
+exports.GetUserRole =(userId, callback) =>{
+  this.getUser(userId,(err, results)=>{
+    if (err) {
+      return callback(err,null);
+    }
+    return callback(null, results.role);
+  });
+};

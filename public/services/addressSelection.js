@@ -170,4 +170,21 @@ $(document).ready(function () {
             }
         });
     });
+
+    $(document).on('click', '.delete_addr', function (){
+        var addressId = $(this).data('address-id');
+
+        $.ajax({
+            type: 'DELETE',
+            url: `/xoa-dia-chi/${addressId}`,
+            success: function(response) {
+                alert(response.message);
+                window.location.reload();
+            },
+            error: function(xhr, status, error){
+                alert(xhr.responseJSON.message);
+            }
+        });
+
+    });
 });
