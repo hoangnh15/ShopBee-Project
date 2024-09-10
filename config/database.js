@@ -11,8 +11,8 @@ const connection = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     ssl: {
-      ca: fs.readFileSync(process.env.SSL_CA_PATH).toString(), 
-      rejectUnauthorized: true 
+        ca: fs.readFileSync(process.env.SSL_CA_PATH).toString(),
+        rejectUnauthorized: true
     }
 });
 
@@ -32,12 +32,12 @@ connection.connect((err) => {
         }
         console.log('MySQL Version:', results[0]['VERSION()']);
     });
-  });
+});
 mongoose.connect("mongodb+srv://shopbee:shopbee@shopbee.9jkd5.mongodb.net/")
-  .then(() => {
-      console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-      console.log("Error connecting to MongoDB", err);
-  });
+    .then(() => {
+        console.log("Connected to MongoDB");
+    })
+    .catch((err) => {
+        console.log("Error connecting to MongoDB", err);
+    });
 module.exports = connection;
