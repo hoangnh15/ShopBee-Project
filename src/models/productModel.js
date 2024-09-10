@@ -1,7 +1,7 @@
 const connection = require('../../config/database');
 
 const userModel = require('./userModel');
-exports.GetAllProduct = (userId, callback) => {
+const GetAllProduct = (userId, callback) => {
 
     userModel.GetUserRole(userId, (err, results) => {
         if (err) {
@@ -84,6 +84,7 @@ const getProductByName = (productName, callback) => {
 
 module.exports = {
     getProductsByCategory,
-    getProductByName
+    getProductByName,
+    GetAllProduct
 };
 

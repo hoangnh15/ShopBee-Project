@@ -29,6 +29,7 @@
                     style="margin-left: 15px; height: auto; overflow-y: auto;">
                     <!---Container card-->
                     <div class="container py-5 container-category">
+                        <%  products = JSON.parse(products); %>
                         <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
                             <table class="table table-bordered table-hover ">
                                 <thead>
@@ -48,9 +49,6 @@
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <%  products = JSON.parse(products); %>
-                                    <% const firstProduct = products[1]; %>
-                                    <p>Product Name: <%= firstProduct.attributes[0].attr_name %></p>
                                     <td contenteditable="true">1</td>
                                     <td contenteditable="true">Iphone 15</td>
                                     <td ><select class="form-select" id="choose_brand">
