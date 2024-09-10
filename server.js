@@ -25,6 +25,7 @@ app.use(session(sessionConfig));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const connection = require('./config/database');
+const client = require('./config/redisConfig');
 
 app.get('/', (req, res) => {
     res.render('index');
