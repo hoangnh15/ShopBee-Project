@@ -8,6 +8,7 @@ const productController = require('../controllers/admin-productController');
 const productModel = require('../models/productModel');
 const brandModel = require('../models/brandModel');
 const categoryModel = require('../models/categoryModel');
+const attributeModel = require('../models/attributeModel');
 const router = express.Router();
 
 router.get('/admin-product', (req, res) => {
@@ -17,6 +18,7 @@ router.get('/admin-product', (req, res) => {
     }
     var brand ="";
     var categories ="";
+    var attributes ="";
     brandModel.GetBrand((err,results) =>{
         if (err) {
             return res.status(500).send('Error fetching information');
@@ -31,13 +33,24 @@ router.get('/admin-product', (req, res) => {
         categories = results;
         
     });
+    attributeModel.GetAttributes((err,results) =>{
+        if (err) {
+            return res.status(500).send('Error fetching information');
+        }
+        attributes = results;
+        
+    });
+
+
     productModel.GetAllProduct(userId,(err,results)=>{
         if (err) {
             return res.status(500).send('Error fetching information');
         }
         const products = results;
         //console.log(JSON.stringify(results, null, 2));
-        res.render('admin_product',{products:JSON.stringify(results, null, 2), brands: JSON.stringify(brand), categories: JSON.stringify(categories)});
+        res.render('admin_product',{products:JSON.stringify(results, null, 2), brands: JSON.stringify(brand), categories: JSON.stringify(categories),
+            attributes: JSON.stringify(attributes),
+        });
     });
     
 
