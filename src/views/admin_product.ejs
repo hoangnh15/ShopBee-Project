@@ -30,6 +30,8 @@
                     <!---Container card-->
                     <div class="container py-5 container-category">
                         <%  products = JSON.parse(products); %>
+                        <%  brands= JSON.parse(brands); %>
+                        <%  categories= JSON.parse(categories); %>
                         <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
                             <table class="table table-bordered table-hover ">
                                 <thead>
@@ -48,28 +50,60 @@
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <td contenteditable="true">1</td>
-                                    <td contenteditable="true">Iphone 15</td>
-                                    <td ><select class="form-select" id="choose_brand">
-                                        <option value="">Choose Brand</option>
-                                    </select></td>
-                                    <td ><select class="form-select" id="choose_category">
-                                        <option value="">Choose Category</option>
-                                    </select></td>
-                                    <td >Đen-128GB</td>
-                                    <td contenteditable="true">15000000</td>
-                                    <td contenteditable="true">10%</td>
-                                    <td >13500000</td>
-                                    <td contenteditable="true">5</td>
-                                    <td contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>
-                                        <div class="row">
-                                            <div class="col-6 text-danger fw-semibold" >Sửa</div>
-                                            <div class="col-6 text-warning fw-semibold">Xóa</div>
-                                        </div>
-                                    </td>
-                                  </tr>
+                                    <% products.forEach(function(product, index){ %> 
+                                        <tr>
+                                            <td><%= index + 1 %></td>
+                                            <td contenteditable="true" ><%= product.product_name %></td>
+                                            <td>
+                                                <select class="form-select" id="choose_brand">
+                                                  <option value="">Choose Brand</option>
+                                                  <% brands.forEach(function(brand) { %>
+                                                    <option value="<%= brand.brand_id %>" 
+                                                      <% if (brand.brand_id === product.brand_id) { %> 
+                                                        selected 
+                                                      <% } %>>
+                                                      <%= brand.brand_name %>
+                                                    </option>
+                                                  <% }) %>
+                                                </select>
+                                              </td>
+                                              
+                                            <td ><select class="form-select" id="choose_category">
+                                                <option value="">Choose Category</option>
+                                                <% categories.forEach(function(category) { %>
+                                                    <option value="<%= category.category_id %>" 
+                                                      <% if (category.category_id === product.category_id) { %> 
+                                                        selected 
+                                                      <% } %>>
+                                                      <%= category.category_name %>
+                                                    </option>
+                                                  <% }) %>
+                                            </select></td>
+                                            <% var attr_group = "" %>
+                                            <% product.attributes.forEach(function(attribute,index){%>
+                                                  <% attr_group+= " "+ attribute.attr_name %>
+                                                <%}) %>
+                                            <td ><%= attr_group %></td>
+                                            <td contenteditable="true"><%= product.origin_price || 'Chưa set giá' %></td>
+                                            <td contenteditable="true"><%= product.discount_percent%></td>
+                                            <td>
+                                                <% if (product.origin_price === null) { %>
+                                                  <%= "Chưa set giá" %>
+                                                <% } else { %>
+                                                  <%= product.origin_price*(1-(product.discount_percent/100))%>
+                                                <% } %>
+                                              </td>                                              
+                                            <td contenteditable="true"><%= product.quantity %></td>
+                                            <td contenteditable="true"><%= brands[0].brand_name %></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-6 text-danger fw-semibold" >Sửa</div>
+                                                    <div class="col-6 text-warning fw-semibold">Xóa</div>
+                                                </div>
+                                            </td>
+                                          </tr>
+                                        <%}) %>
+                                  
                                   <!-- More rows as needed -->
                                   
                                 </tbody>

@@ -8,7 +8,7 @@ const GetAllProduct = (userId, callback) => {
             return callback(err, null);
         }
         if (results === 'admin') {
-            connection.query(`select v.variant_id, p.product_id, p.product_name,b.brand_name,c.category_name, v.origin_price, v.discount_percent, va.attr_id,a.type, a.attr_name, vs.quantity, p.brand_id, p.category_id
+            connection.query(`select v.variant_id, p.product_id, p.product_name,b.brand_name,c.category_name, v.origin_price, v.discount_percent, va.attr_id,a.type, a.attr_name, vs.quantity, p.brand_id, p.category_id, p.description
                                 from Variants v Join Variant_attributes va ON v.variant_id = va.variant_id
                                 join Products p ON v.product_id = p.product_id
                                 join Brands b ON p.brand_id = b.brand_id
