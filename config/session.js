@@ -1,5 +1,5 @@
 const session = require('express-session');
-const RedisStore = require('connect-redis').default; 
+/*const RedisStore = require('connect-redis').default; 
 
 const redisClient = require('./redisConfig'); 
 
@@ -13,3 +13,12 @@ module.exports = {
     }),
     cookie: { maxAge: 30 * 60 * 1000 } 
 };
+
+*/
+
+module.exports = {
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    ookie: { maxAge: 30 * 60 * 1000 } 
+}
