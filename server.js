@@ -14,7 +14,7 @@ app.use(cors());
 
 
 
-// Thiết lập EJS làm view engine
+// Thiết lập EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views'));
 // cookie session config
@@ -25,7 +25,6 @@ app.use(session(sessionConfig));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const connection = require('./config/database');
-const client = require('./config/redisConfig');
 
 app.get('/', (req, res) => {
     res.render('index');
